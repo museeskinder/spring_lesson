@@ -1,2 +1,2 @@
 # spring_lesson
-repo that includes all my spring learning activities.
+This repo that includes all my **spring** learning activities.

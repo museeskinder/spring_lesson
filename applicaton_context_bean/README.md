@@ -12,7 +12,7 @@
 ```
 
 This is the root interface for accessing a Spring bean container.
-It provides basic functionality for managing beans, such as getting beans by name or type, checking if a bean exists, and registering bean aliases.
+It provides basic functionality for managing beans, such as getting beans by micColor or type, checking if a bean exists, and registering bean aliases.
 
 ```
     org.springframework.context.ApplicationContext

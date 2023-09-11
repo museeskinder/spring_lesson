@@ -6,7 +6,7 @@
 
     <groupId>com.spring_lesson</groupId>
     <artifactId>NoUniqueBeanDefinitionException</artifactId>
-
+    <version>1.0-SNAPSHOT</version>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
         <dependency>

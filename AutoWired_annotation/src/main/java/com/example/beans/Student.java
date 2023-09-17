@@ -17,7 +17,7 @@ public class Student {
 
     private Course course;
 
-    @Autowired(required = false)
+    @Autowired
     public Student(Course course) {
         System.out.println("Student bean created.");
         name = "muse";

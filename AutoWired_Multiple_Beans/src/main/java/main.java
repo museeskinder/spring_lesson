@@ -1,5 +1,4 @@
-import com.example.beans.Person;
-import com.example.beans.Pet;
+import com.assignment.beans.Person;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class main {

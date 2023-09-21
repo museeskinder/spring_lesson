@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Primary
 public class SonySpeaker implements Speaker {
+    @Override
     public String makeSound(Song song) {
         return "Sony speaker is playing " + song.getSongTitle() + " by " + song.getSongArtist() + " .";
     }

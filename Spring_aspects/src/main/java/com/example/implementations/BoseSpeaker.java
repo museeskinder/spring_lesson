@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class BoseSpeaker implements Speaker {
+    @Override
     public String makeSound(Song song) {
         return "Bose speaker is playing " + song.getSongTitle() + " by " + song.getSongArtist();
     }

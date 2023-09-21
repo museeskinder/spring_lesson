@@ -13,7 +13,6 @@ import java.time.Instant;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-@Scope(BeanDefinition.SCOPE_PROTOTYPE)
 @Component
 public class VehicleService {
     @Autowired
@@ -28,11 +27,11 @@ public class VehicleService {
         this.speaker = speaker;
     }
 
-    @Autowired
     public Tyre getTyre() {
         return tyre;
     }
 
+    @Autowired
     public void setTyre(Tyre tyre) {
         this.tyre = tyre;
     }

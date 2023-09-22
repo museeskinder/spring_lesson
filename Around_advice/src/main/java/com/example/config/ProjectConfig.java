@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @Configuration
-@ComponentScan(basePackages = {"com.example.service", "com.example.implementations"})
+@ComponentScan(basePackages = {"com.example.service", "com.example.implementations", "com.example.aspects"})
 @EnableAspectJAutoProxy
 public class ProjectConfig {
 }

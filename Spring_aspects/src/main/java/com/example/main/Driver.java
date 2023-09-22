@@ -11,8 +11,8 @@ public class Driver {
         song.setSongArtist("Khalid");
         song.setSongTitle("eleven");
         VehicleService vehicleService = context.getBean(VehicleService.class);
-        vehicleService.playMusic(true, song);
-        vehicleService.moveVehicle(true);
-        vehicleService.applyBrake(true);
+        String music = vehicleService.playMusic(true, song);
+        String move = vehicleService.moveVehicle(true);
+        String stop = vehicleService.applyBrake(true);
     }
 }

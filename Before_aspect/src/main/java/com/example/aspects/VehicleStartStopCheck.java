@@ -15,14 +15,9 @@ import java.util.logging.Logger;
 @Order(1)
 public class VehicleStartStopCheck {
     Logger logger = Logger.getLogger(VehicleStartStopCheck.class.getName());
-    @Before("execution(* com.example.services.*.*(..))")
+    @Before("execution(* com.example.services.*.*(..)) && args(vehicleStarted,..)")
     public void vehicleStartStopCheck(boolean vehicleStarted, JoinPoint joinPoint) throws Throwable {
        if(!vehicleStarted)
            throw new RuntimeException("Vehicle is not started");
-    }
-
-    @AfterThrowing(value = "* com.example.*.*(..)", throwing = "err")
-    public void errorExecution(JoinPoint joinPoint, Exception ex) {
-        logger.log(Level.SEVERE, joinPoint.getSignature().toString() + " found exception: " + ex.getMessage());
     }
 }

@@ -37,7 +37,7 @@ public class VehicleService {
     }
 
     public String playMusic(boolean vehicleStarted, Song song) {
-       return speaker.makeSound(song);
+        throw new NullPointerException("Couldn't get the song");
     }
     public String moveVehicle(boolean vehicleStarted) {
         return tyre.rotate();

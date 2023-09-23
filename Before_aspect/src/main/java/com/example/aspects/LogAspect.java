@@ -4,6 +4,7 @@ import com.example.services.VehicleService;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.time.Duration;
@@ -11,10 +12,11 @@ import java.time.Instant;
 import java.util.logging.Logger;
 
 @Component
+@Order(2)
 @Aspect
 public class LogAspect {
     Logger logger = Logger.getLogger(LogAspect.class.getName());
-    @Around("execute(* com.example.*.*(..)")
+    @Around("execution(* com.example.*.*(..)")
     public void log(ProceedingJoinPoint joinPoint) throws Throwable {
         logger.info(joinPoint.getSignature().toString() + " Method execution started");
         Instant start = Instant.now();

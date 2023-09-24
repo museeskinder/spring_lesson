@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 @Aspect
 public class LogAspect {
     Logger logger = Logger.getLogger(LogAspect.class.getName());
-    @Around("execution(* com.example.services.*.*(..)")
+    @Around("execution(* com.example.services.*.*(..))")
     public void log(ProceedingJoinPoint joinPoint) throws Throwable {
         logger.info(joinPoint.getSignature().toString() + " Method execution started");
         Instant start = Instant.now();
@@ -29,7 +29,7 @@ public class LogAspect {
         var duration = Duration.between(start,end).toMillis();
         logger.info(joinPoint.getSignature().toString() + "Time took to perform method execution: " + duration) ;
     }
-    @AfterThrowing(value = "* com.example.services.*.*(..)", throwing = "err")
+    @AfterThrowing(value = "execution(* com.example.services.*.*(..))", throwing = "err")
     public void errorExecution(JoinPoint joinPoint, Exception err) {
         logger.log(Level.SEVERE, joinPoint.getSignature().toString() + " found exception: " + err.getMessage());
     }

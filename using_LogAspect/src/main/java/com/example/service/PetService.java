@@ -21,7 +21,7 @@ public class PetService {
         System.out.println("PetService bean has been created");
     }
 
-    public String feed(boolean animalWakeU) {
+    public String feed(boolean animalWake) {
         return animal.eat();
     }
 }

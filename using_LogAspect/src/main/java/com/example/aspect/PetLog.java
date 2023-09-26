@@ -3,6 +3,7 @@ package com.example.aspect;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.time.Duration;
@@ -11,6 +12,7 @@ import java.util.logging.Logger;
 
 @Aspect
 @Component
+@Order(2)
 public class PetLog {
     Logger logger = Logger.getLogger(PetLog.class.getName());
 
